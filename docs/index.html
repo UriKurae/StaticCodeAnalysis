@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Static Code Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Static Code Analysis<br />
+						</h1>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Static Code Analysis</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Explanation</a></li>
+							<li><a href="generic.html">How to use</a></li>
+							<li><a href="elements.html">Try it yourself</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/UriKurae" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h3 style="text-align:left">Introduction</h3>
+									<p style="text-align:left">
+										Imagine a world in which every programmer out there knows how to write code without any errors, perfectly working on the
+										first time and super easy and clear to read for other programmer colleagues. That is a dream world, in which every programmer of us would like to go.
+										Writing clear code is a hard task itself, even the most professional programmers out there can do mistakes and it's a normal and common thing.
+									</p>
+									<p style="text-align:left">
+										Well then, chances are that you used drive documents or word itself to write some essay, either in high school, university or whatever.
+										I am sure you are an expert in writing on your own language, or at least that is what I hope. Word or drive gives you
+										a tool to detect possible grammar mistakes, such as a missing letter, a misspelled word, etc... And chances are that even if you're very good at your language, you still use that tool, because why not, right? It gives you confidence
+										and helps you detect errors that maybe you missed. ¿Wouldn't that be amazing for programming purposes? ¿And why do I tell you all of this? Well, this was a brief introduction to understand
+										what Code Analysis is! It's a tool made with the purpose of detecting possible errors at the time you code.
+									</p>
+
+									<h3 style="text-align:left">¿What is static code Analysis?</h3>
+									<p style="text-align:left">
+										Static code analysis is similar to the example stated above, but a bit different, if you misspell a variable, if you declare two variables with the same name, the compiler
+										is just going to fail and it's going to tell you, that's the purpose, it only tries to make sense of what you code. But a compiler wont understand what your code intention was, the purpose of the code you've written, it just tries to compile
+										what you've written, it will not try to look at all your code, analyze it and try to make sure that what you've written is what your intentions were. That is what an Static Analyzer is, a tool that will look at your code and try to catch unintentional errors without having to run the program itself.
+									</p>
+									<p style="text-align:left">Static analysis is good at finding coding issues like:</p>
+									<p style="text-align:left">&bull; Programming errors</p>
+									<p style="text-align:left">&bull; Syntax violations</p>
+									<p style="text-align:left">&bull; Security vulnerabilities</p>
+									<p style="text-align:left">&bull; And more</p>
+									<h3 style="text-align:left">¿But what problems does Static Code Analysis solve?</h3>
+
+									<p style="text-align:left">Let's take a look at this piece of code:</p>
+									<img src="images/code_001.jpg" />
+									<p style="text-align:left">Seems good and okay, right?</p>
+									<p style="text-align:left">
+										Well, if you take a slower look, you will notice one mistake that I am sure most of the programmers out there have done in the past at least once.
+										You have to do a double for, you copy and paste the previous for, and you forget to change one of the letters that makes it work as you intended. Here, the problem is that the compiler will not say anything, because
+										the code itself is not "wrong", it's perfect, but the problem is that those were not your intentions at all, you wanted to do another thing. Here, we will run our static code analyzer program, in my case I am using PVS-Studio. After running our
+										static code analyzer program, we will get the following warnings for this code:
+									</p>
+									<img src="images/code_002.jpg" />
+
+									<p style="text-align:left">
+										As you can see, it warns us of two pontential mistakes, the first message says: "The condition 'j < 20' of loop is always true" and the second one
+										says: "It is likely that a wrong variable is being incremented inside the 'for' operator. Consider reviewing 'i'." So in this case, PVS-studio warned us that our for
+										may not work as we intended, and with two simple warnings, the program saved us from maybe not finding the mistake. In this case, of course, the mistake is very small, but if you have
+										thousands of lines of code, it can save you a lot of time!
+									</p>
+
+									<p style="text-align:left">Let's take a look at another example</p>
+
+									<img src="images/Code_003.jpg" />
+
+									<p style="text-align:left">
+										Now this one is a bit more tricky to catch, I created a class that I start with the function StartEntity, the mistake is that I "forgot" to return an actual player, it just returns "nullptr".
+										Then, at the bottom I coded that if the player is true, the program should tell us that it created the player. Now, we again run PVS-Studio, our static analyzer. After running it, it says the following:
+									</p>
+
+									<img src="images/Code_004.jpg" />
+
+									<p style="text-align:left">
+										"Expression 'player' is always false." The static analyzer warned us that the variable is always false, and that we may check that. Again, we can see that this could save us a lot of time when having thousands of lines of code. It may seem like a basic mistake
+										but no one is perfect, it could happen to anyone.
+									</p>
+
+									<h3 style="text-align:left">How is static analysis done?</h3>
+									<p style="text-align:left">
+										The static analysis process occurs before software testing in early development. Once the code is already written, we should use the static code analyzer
+										to look over the code. The program will find possible problems and developers can begin to fix any apparent mistakes, usually we should start by fixing the most problematic ones. Once we
+										resolved all the issues we can move to testing through execution.
+									</p>
+									<h3 style="text-align:left">Why should I use static analysis?</h3>
+									<p style="text-align:left">
+										Imagine not having a tool that does the static analysis for us, it could take a lot of work and not only that, a lot of time, because us, humans, have to review
+										the code and figure out "How will it behave when it compiles?". Then having a tool that does this for us is much safer and much much faster, making it more efficient for us.
+									</p>
+
+									<h3 style="text-align:left">Advantages and disadvantages</h3>
+									<table>
+										<caption>Table of contents</caption>
+										<tr>
+											<td>Advantages</td>
+											<td>Disadvantages</td>
+										</tr>
+										<tr>
+											<td>Can evaluate all the code in your program</td>
+											<td>It can detect false positives</td>
+										</tr>
+										<tr>
+											<td>Much faster than reviewing code manually</td>
+											<td>May not find a mistake, tools are not perfect</td>
+										</tr>
+										<tr>
+											<td>Less likely to make mistakes than humans</td>
+											<td>Third party libraries may not be able to be analyzed</td>
+										</tr>
+										<tr>
+											<td>It can be done in an offline development environment</td>
+											<td>Could take some time analyzing</td>
+										</tr>
+									</table>
+
+									<h3 style="text-align:left">Types of static analysis</h3>
+
+									<p style="text-align:left">There are some methods a company could use, which are the following:</p>
+									<p style="text-align:left">&bull; Pattern-Based Static Analysis: The tool scans and checks it against one or more set of rules. For example a programmer could have mistaken the null character '\0' and instead typed "\0" </p>
+									<p style="text-align:left">&bull; Fault analysis: Analyzes faults and failures in model components </p>
+									<p style="text-align:left">&bull; Interface Analysis: Verifies interactive and distribution simulations to check the code</p>
+
+
+									<h3 style="text-align:left">References</h3>
+									<p style="text-align:left"><a href="https://searchsoftwarequality.techtarget.com/definition/static-analysis-static-code-analysis" style="text-align:left">&bull;Search Software Quality</a></p>
+									<p style="text-align:left"><a href="https://www.parasoft.com/how-does-static-analysis-prevent-defects-and-accelerate-delivery/" style="text-align:left">&bull;What is static analysis? Code Analysis Tools</a></p>
+									<p style="text-align:left"><a href="https://youtu.be/vYW6TOwFK2M" style="text-align:left">&bull;The Cherno Static Analysis (Very recommended!)</a></p>
+									<p style="text-align:left"><a href="https://www.geeksforgeeks.org/types-of-static-analysis-methods/" style="text-align:left">&bull;Types of static analysis</a></p>
+								</header>
+							</article>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
