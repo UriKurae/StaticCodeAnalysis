@@ -11,3 +11,14 @@ This is a personal research on Static Code Analysis, here you will find informat
 · Links to websites or videos for further information. <br />
 
 And at the end of this guide, you will understand how important and usefull a Code Analyzer can be.
+
+## Requirements
+
+· Knowledge of some programming language, such as C or C++. <br />
+· <a href="https://visualstudio.microsoft.com/es/downloads/">Software: Visual Studio</a>. <br />
+· PVS-Studio (Installer and guide on this documentation).
+
+## Author 
+
+My name is <a href="https://github.com/UriKurae">Oriol Bernal</a>, I'm a student of 2nd year in Video Game Design and Development at the university CITM (UPC), in Barcelona. I am in charge of explaining what Static Code Analysis is, and I will explain you how usefull a tool like a code analyzer can be and why you should use it.
+
