@@ -53,6 +53,80 @@
 										it lasts for 1 year and you can do this every year for free!
 									</p>
 									<img src="images/Installation_003.jpg" />
+
+									<p style="text-align:left"><b>4.</b> Now that you have the program succesfully installed you can hop into visual studio and check on the <b>"Extensions"</b> menu, you should be able to see a new tab option, which is <b>"PVS-Studio."</b></p>
+									<img src="images/Installation_004.jpg" />
+
+									<p style="text-align:left"> As you can see, you have plenty of options, let's test all of them. </p>
+									<img src="images/Installation_005.jpg" />
+
+									<h3 style="text-align:left"><b>Guide</b></h3>
+									<h4 style="text-align:left"><b>1. Some previous knowledge</b></h4>
+
+									<p style="text-align:left"> Let's talk a little bit about the interface of PVS-Studio and what options are available. Take a look at the next picture:</p>
+
+									<img src="images/Guide_001.jpg" />
+
+									<p style="text-align:left">
+										If PVS-Studio finds something that's off, it will warn you with a message. As you can see in the picture above, we have plenty of things going on.
+										In the first line, we can see three horizontal rows, if you click that icon, the next options will appear:
+									</p>
+									<img src="images/Guide_002.jpg" />
+
+									<p style="text-align:left">
+										&bull; The first option, <b>"Make as false alarm"</b>, will mark the selected problem as a false alarm, remember PVS-Studio isn't perfect, and could detect something as a mistake when in reality it is not.
+										<br />&bull; <b>"Suppress all messages"</b>, as the name suggests, it will eliminate all messages from PVS-Studio, be carefull with this one.
+										<br />&bull; <b>"Hide"</b> will hide the type of message, so be carefull, as to unhide it later, you will have to go to PVS-Studio options to do it manually.
+										<br />&bull; <b>"Don't check files from" </b> will let you choose to not show messages from the same source as the selected one, again, be carefull.
+										<br />&bull; Finally, <b>"Analyzed Source Files"</b> will tell you which files were searched for the type of message selected.
+
+										<br /><br /><b>Note:</b> All the described above is hidden, so you don't missclick and make a mistake, in case you really need to access those options, you have to click the three horizontal rows.
+
+										<br /><br /> Next image:
+
+									</p>
+
+									<img src="images/Guide_003.jpg" />
+
+									<p style="text-align:left">
+										This one is pretty simple, it has the following:
+
+										<br /> &bull; <b>The two rows pointing up and down</b> will allow you to navigate through the errors PVS-Studio found, this is great to go directly to see the specific error.
+										<br /> &bull; <b>"Fails"</b> will tell you how many fails PVS-Studio found. Simple.
+										<br />&bull; The next lines, <b>"High, Medium, Low"</b> are filters that tells you what PVS-Studio thinks about those fails, if they are very problematic or medium, or just low problems. This is great to filter them quickly.
+										<br /> &bull; <b>The next options</b> are filters to check general errors, optimization erros, or 64-bit errors, followed by a filter setting to have more options to filter.
+
+										<br /><br />Finally, we have the error section:
+									</p>
+									<img src="images/Guide_004.jpg" />
+
+									<p style="text-align:left">
+										In this section, we have the errors:
+
+										<br /> &bull; <b>The star</b> allows you to mark the error found, and no matter what kind of error is (Low, Medium, High) it will stay on top of the list if you mark it with the star.
+										<br /> &bull; <b>The code</b> tells you what kind of error it is, if you click the code, it will search online for more information, very usefull.
+										<br /> &bull; <b>The message</b> simply gives you a brief explanation of what PVS-Studio might think the problem is, you should always check this, as it might give you hints to find solutions.
+										<br /> &bull; Finally, the <b>File and Line</b> give you the location of the error found by PVS-Studio.
+										<br /><br /> Now that you know how the interface works, let's see which options does PVS-Studio give us.
+									</p>
+
+									<h4 style="text-align:left"><b>2. Check current file</b></h4>
+									<p style="text-align:left">
+										The first option, <b>"Check current file"</b> will analyze your current file, this works great if you want to just make a quick search into your current file,
+										maybe to check before pushing anything. As soon as you click the option, give PVS-Studio some seconds, it will analyze your file and give you all the options described in point 1 above.
+									</p>
+
+									<h4 style="text-align:left"><b>3. Check open files</b></h4>
+									<p style="text-align:left">
+										<b>"Check open files"</b> will analyze all open tabs in your visual studio, it does the same thing as point two, but with multiple files.
+									</p>
+
+									<h4 style="text-align:left"><b>4. Check</b></h4>
+									<p style="text-align:left">
+										<b>"Check"</b> will give you three more options to analyze, you can analyze the current project itself, the selected items, or just analyze the entire solution. 
+									</p>
+
+
 								</header>
 								</section>
 
