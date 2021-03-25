@@ -22,3 +22,7 @@ And at the end of this guide, you will understand how important and usefull a Co
 
 My name is <a href="https://github.com/UriKurae">Oriol Bernal</a>, I'm a student of 2nd year in Video Game Design and Development at the university CITM (UPC), in Barcelona. I am in charge of explaining what Static Code Analysis is, and I will explain you how usefull a tool like a code analyzer can be and why you should use it.
 
+## License
+
+I used some textures from the internet to give to the user some feedback. It's a whole pack with a character and map assets.
+You can find the website of the assets <a href="https://opengameart.org/content/zelda-like-tilesets-and-sprites"><b>here</b>.
