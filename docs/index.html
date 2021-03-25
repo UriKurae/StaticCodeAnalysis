@@ -154,12 +154,38 @@
 									<p style="text-align:left">&bull; Fault analysis: Analyzes faults and failures in model components </p>
 									<p style="text-align:left">&bull; Interface Analysis: Verifies interactive and distribution simulations to check the code</p>
 
+									<h3 style="text-align:left">Sanitizers</h3>
+
+									<p style="text-align:left">
+										Now there are another programs that can help you that are used in runtime to report execution errors, those are called <b>"Sanitizers"</b>.
+										We can find some different types of sanitizers, such as:
+										<br />
+										<b>1. Adress Sanitizer and LeakSanitizer:</b> Adress Sanitizer is a memory detector for C/C++, both detect the following errors:
+										<br />&bull; Heap buffer overflow.
+										<br />&bull; Stack buffer overflow.
+										<br />&bull; Global buffer overflow.
+										<br />&bull; Memory leaks.
+
+										<br /><b>2. Thread sanitizer:</b> It's a data race detector for C/C++. Data race occurs when two threads access the same variable concurrently
+										and at least one of the accesses is writen.
+
+										<br /><b>3. Memory sanitizer:</b> It detects uninitialized memory reads in C/C++ programs. Those uninitialized values occur when stack or heap allocated memory
+										is read before it is written.
+
+										<br /> <b>Note:</b> you can find AddressSanitizer (ASan) in this following link:
+									<a href="https://github.com/google/sanitizers/wiki/AddressSanitizer" style="text-align:left"><b>ASan</b></a>
+
+									</p>
+
+
 
 									<h3 style="text-align:left">References</h3>
 									<p style="text-align:left"><a href="https://searchsoftwarequality.techtarget.com/definition/static-analysis-static-code-analysis" style="text-align:left">&bull;Search Software Quality</a></p>
 									<p style="text-align:left"><a href="https://www.parasoft.com/how-does-static-analysis-prevent-defects-and-accelerate-delivery/" style="text-align:left">&bull;What is static analysis? Code Analysis Tools</a></p>
 									<p style="text-align:left"><a href="https://youtu.be/vYW6TOwFK2M" style="text-align:left">&bull;The Cherno Static Analysis (Very recommended!)</a></p>
 									<p style="text-align:left"><a href="https://www.geeksforgeeks.org/types-of-static-analysis-methods/" style="text-align:left">&bull;Types of static analysis</a></p>
+									<p style="text-align:left"><a href="https://hpc-wiki.info/hpc/Compiler_Sanitizers#:~:text=The%20C%2FC%2B%2B%20compilers%20Clang,AddressSanitizer%20and%20LeakSanitizer" style="text-align:left">&bull;Compiler Sanitizers</a></p>
+									<p style="text-align:left"><a href="https://medium.com/@jjuou2/thread-sanitizer-and-static-analysis-d04c3630dc35" style="text-align:left">&bull;More about Sanitizers</a></p>
 								</header>
 							</article>
 				<!-- Copyright -->
